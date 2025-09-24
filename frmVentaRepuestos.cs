@@ -17,9 +17,16 @@ namespace pryBaldovinoSP3ExR
             InitializeComponent();
         }
 
-        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back))           
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

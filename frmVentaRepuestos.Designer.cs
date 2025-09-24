@@ -113,6 +113,7 @@
             txtDescripcion.Size = new Size(201, 23);
             txtDescripcion.TabIndex = 7;
             txtDescripcion.TextChanged += txtDescripcion_TextChanged;
+            txtDescripcion.KeyPress += txtDescripcion_KeyPress;
             // 
             // lblPrecio
             // 
