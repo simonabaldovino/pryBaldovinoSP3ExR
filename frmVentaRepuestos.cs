@@ -16,5 +16,10 @@ namespace pryBaldovinoSP3ExR
         {
             InitializeComponent();
         }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
