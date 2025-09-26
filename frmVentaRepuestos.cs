@@ -17,7 +17,26 @@ namespace pryBaldovinoSP3ExR
             InitializeComponent();
         }
 
-        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        struct Repuesto
+        {
+            public char marca; //P , R, F
+            public char origen; // I, N
+            public int numeroRepuesto;             
+            public string descripcion;
+            public float precio; 
+        }
+
+        Repuesto[] vecRespuestos = new Repuesto[100];
+            
+            vecRespuestos[0].marca = xxx; 
+            vecRespuestos[1].origen= xxx; 
+            vecRespuestos[2].numeroRepuesto = xxx;  
+            vecRespuestos[3].descripcion = xxx; 
+            vecRespuestos[4].precio = xxx; 
+       
+
+
+    private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back))           
             {
@@ -27,6 +46,9 @@ namespace pryBaldovinoSP3ExR
             {
                 e.Handled = true;
             }
+
         }
     }
 }
+        
+
