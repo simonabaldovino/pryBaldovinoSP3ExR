@@ -39,6 +39,7 @@
             lblPrecio = new Label();
             txtPrecio = new MaskedTextBox();
             btnCargar = new Button();
+            btnConsultar = new Button();
             SuspendLayout();
             // 
             // cboMarca
@@ -139,12 +140,23 @@
             btnCargar.TabIndex = 10;
             btnCargar.Text = "Cargar";
             btnCargar.UseVisualStyleBackColor = true;
+            btnCargar.Click += btnCargar_Click;
+            // 
+            // btnConsultar
+            // 
+            btnConsultar.Location = new Point(139, 299);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(81, 23);
+            btnConsultar.TabIndex = 11;
+            btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = true;
             // 
             // frmVentaRepuestos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(337, 346);
+            Controls.Add(btnConsultar);
             Controls.Add(btnCargar);
             Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
@@ -176,5 +188,6 @@
         private Label lblPrecio;
         private MaskedTextBox txtPrecio;
         private Button btnCargar;
+        private Button btnConsultar;
     }
 }

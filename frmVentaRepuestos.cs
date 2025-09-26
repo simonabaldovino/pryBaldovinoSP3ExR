@@ -21,32 +21,40 @@ namespace pryBaldovinoSP3ExR
         {
             public char marca; //P , R, F
             public char origen; // I, N
-            public int numeroRepuesto;             
+            public int numeroRepuesto;
             public string descripcion;
-            public float precio; 
+            public float precio;
         }
 
         Repuesto[] vecRespuestos = new Repuesto[100];
-            
+
+        public struct Repuesto
+        {
             vecRespuestos[0].marca = xxx; 
             vecRespuestos[1].origen= xxx; 
             vecRespuestos[2].numeroRepuesto = xxx;  
             vecRespuestos[3].descripcion = xxx; 
             vecRespuestos[4].precio = xxx; 
+        }
+            
+
+
+
+
+
+
        
-
-
-    private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnCargar_Click(object sender, EventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back))           
+            if(cboMarca.SelectedIndex = "PRF")
             {
-                e.Handled = false;
+                btnCargar.Enabled = true;
             }
-            else
+            
+            if(cboOrigen.SelectedIndex) = "IN")
             {
-                e.Handled = true;
-            }
 
+            }
         }
     }
 }
