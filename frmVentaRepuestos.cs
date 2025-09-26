@@ -38,23 +38,6 @@ namespace pryBaldovinoSP3ExR
         }
             
 
-
-
-
-
-
-       
-        private void btnCargar_Click(object sender, EventArgs e)
-        {
-            if(cboMarca.SelectedIndex = "PRF")
-            {
-                btnCargar.Enabled = true;
-            }
-            
-            if(cboOrigen.SelectedIndex) = "IN")
-            {
-
-            }
         }
     }
 }
