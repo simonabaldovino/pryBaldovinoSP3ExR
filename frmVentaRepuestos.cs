@@ -12,11 +12,6 @@ namespace pryBaldovinoSP3ExR
 {
     public partial class frmVentaRepuestos : Form
     {
-        public frmVentaRepuestos()
-        {
-            InitializeComponent();
-        }
-
         struct Repuesto
         {
             public char marca; //P , R, F
@@ -27,16 +22,16 @@ namespace pryBaldovinoSP3ExR
         }
 
         Repuesto[] vecRespuestos = new Repuesto[100];
+        int indice = 0;
 
-        public struct Repuesto
+
+        public frmVentaRepuestos()
         {
-            vecRespuestos[0].marca = xxx; 
-            vecRespuestos[1].origen= xxx; 
-            vecRespuestos[2].numeroRepuesto = xxx;  
-            vecRespuestos[3].descripcion = xxx; 
-            vecRespuestos[4].precio = xxx; 
+            InitializeComponent();
         }
-            
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
 
         }
     }
