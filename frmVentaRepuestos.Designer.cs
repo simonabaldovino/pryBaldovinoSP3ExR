@@ -37,9 +37,9 @@
             lblDescripcion = new Label();
             txtDescripcion = new TextBox();
             lblPrecio = new Label();
-            txtPrecio = new MaskedTextBox();
             btnCargar = new Button();
             btnConsultar = new Button();
+            txtPrecio = new TextBox();
             SuspendLayout();
             // 
             // cboMarca
@@ -128,15 +128,6 @@
             lblPrecio.TabIndex = 8;
             lblPrecio.Text = "Precio";
             // 
-            // txtPrecio
-            // 
-            txtPrecio.Location = new Point(121, 321);
-            txtPrecio.Margin = new Padding(3, 4, 3, 4);
-            txtPrecio.Mask = "$999999999";
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(229, 27);
-            txtPrecio.TabIndex = 9;
-            // 
             // btnCargar
             // 
             btnCargar.Location = new Point(258, 399);
@@ -158,14 +149,23 @@
             btnConsultar.Text = "Consultar";
             btnConsultar.UseVisualStyleBackColor = true;
             // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(121, 318);
+            txtPrecio.Margin = new Padding(3, 4, 3, 4);
+            txtPrecio.MaxLength = 50;
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(229, 27);
+            txtPrecio.TabIndex = 12;
+            // 
             // frmVentaRepuestos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(385, 461);
+            Controls.Add(txtPrecio);
             Controls.Add(btnConsultar);
             Controls.Add(btnCargar);
-            Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
             Controls.Add(txtDescripcion);
             Controls.Add(lblDescripcion);
@@ -194,8 +194,8 @@
         private Label lblDescripcion;
         private TextBox txtDescripcion;
         private Label lblPrecio;
-        private MaskedTextBox txtPrecio;
         private Button btnCargar;
         private Button btnConsultar;
+        private TextBox txtPrecio;
     }
 }
