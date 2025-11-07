@@ -48,9 +48,13 @@
             lblOrigenC = new Label();
             lblMarcaC = new Label();
             cboMarcaC = new ComboBox();
-            txtDatos = new TextBox();
+            dgvDatos = new DataGridView();
+            colNRepuesto = new DataGridViewTextBoxColumn();
+            colDescripcion = new DataGridViewTextBoxColumn();
+            colPrecio = new DataGridViewTextBoxColumn();
             grpCarga.SuspendLayout();
             grpConsulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             SuspendLayout();
             // 
             // cboMarca
@@ -256,20 +260,46 @@
             cboMarcaC.Size = new Size(229, 28);
             cboMarcaC.TabIndex = 13;
             // 
-            // txtDatos
+            // dgvDatos
             // 
-            txtDatos.Location = new Point(471, 329);
-            txtDatos.Multiline = true;
-            txtDatos.Name = "txtDatos";
-            txtDatos.Size = new Size(386, 232);
-            txtDatos.TabIndex = 0;
+            dgvDatos.AllowUserToAddRows = false;
+            dgvDatos.AllowUserToDeleteRows = false;
+            dgvDatos.AllowUserToOrderColumns = true;
+            dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatos.Columns.AddRange(new DataGridViewColumn[] { colNRepuesto, colDescripcion, colPrecio });
+            dgvDatos.Location = new Point(471, 336);
+            dgvDatos.Name = "dgvDatos";
+            dgvDatos.RowHeadersWidth = 51;
+            dgvDatos.Size = new Size(386, 202);
+            dgvDatos.TabIndex = 17;
+            // 
+            // colNRepuesto
+            // 
+            colNRepuesto.HeaderText = "N de repuesto";
+            colNRepuesto.MinimumWidth = 6;
+            colNRepuesto.Name = "colNRepuesto";
+            colNRepuesto.Width = 125;
+            // 
+            // colDescripcion
+            // 
+            colDescripcion.HeaderText = "Descripción";
+            colDescripcion.MinimumWidth = 6;
+            colDescripcion.Name = "colDescripcion";
+            colDescripcion.Width = 125;
+            // 
+            // colPrecio
+            // 
+            colPrecio.HeaderText = "Precio";
+            colPrecio.MinimumWidth = 6;
+            colPrecio.Name = "colPrecio";
+            colPrecio.Width = 125;
             // 
             // frmVentaRepuestos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(926, 605);
-            Controls.Add(txtDatos);
+            Controls.Add(dgvDatos);
             Controls.Add(grpConsulta);
             Controls.Add(grpCarga);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -284,8 +314,8 @@
             grpCarga.PerformLayout();
             grpConsulta.ResumeLayout(false);
             grpConsulta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -309,6 +339,9 @@
         private ComboBox cboMarcaC;
         private RadioButton optNacional;
         private RadioButton optImportado;
-        private TextBox txtDatos;
+        private DataGridView dgvDatos;
+        private DataGridViewTextBoxColumn colNRepuesto;
+        private DataGridViewTextBoxColumn colDescripcion;
+        private DataGridViewTextBoxColumn colPrecio;
     }
 }
